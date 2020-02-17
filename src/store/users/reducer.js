@@ -1,5 +1,5 @@
 const initialState = {
-    testUsers: []
+    user: {}
 }
 
 // export default (state = initialState, { type, payload }) => {

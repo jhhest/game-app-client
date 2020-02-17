@@ -1,12 +1,19 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { userLogin } from "../store/users/actions";
 
 export class login extends Component {
   state = {
     email: "",
     password: ""
   };
+
   handleSubmit = async event => {
-    event.preventDeefault();
+    event.preventDefault();
+    const { email, password } = this.state;
+    console.log("this.state", this.state);
+    console.log("what is props dispatch", this.props.dispatch);
+    this.props.dispatch(userLogin(email, password));
   };
 
   handleChange = event => {
@@ -16,13 +23,14 @@ export class login extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-    console.log("state is", this.state)
+    console.log("state is", this.state);
   };
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <p>
-          emailadres:{" "}
+          emailadres:
           <input
             onChange={this.handleChange}
             type="text"
@@ -31,7 +39,7 @@ export class login extends Component {
           />
         </p>
         <p>
-          password:{" "}
+          password:
           <input
             onChange={this.handleChange}
             type="text"
@@ -45,4 +53,10 @@ export class login extends Component {
   }
 }
 
-export default login;
+// const mapStateToProps = (state) => ({
+//   return {
+
+//   }
+// })
+
+export default connect()(login);
