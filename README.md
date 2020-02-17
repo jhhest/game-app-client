@@ -1,3 +1,7 @@
+npm install redux react-redux react-router-dom redux-thunk axios
+
+# Create React App readme...
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
