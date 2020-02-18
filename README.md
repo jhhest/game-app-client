@@ -1,4 +1,25 @@
-npm install redux react-redux react-router-dom redux-thunk axios
+# Notes with assignment.
+
+## Used packages
+
+npm install redux react-redux redux-thunk react-dom react-router-dom redux-thunk axios react
+
+## Notes from teacher.
+
+### Server:
+
+- Setup: Express, cors, sequelize, pg
+- Create a User: Model, endpoints, bcrypt, (signup)
+- Login: jwt, endpoint, bcrypt
+- Auth Middleware: check jwt, add user object to request
+
+### Frontend:
+
+- create-react-app, Router
+- Welcome Page
+- Login Page
+- Signup page
+- Redux for the token and user data
 
 # Create React App readme...
 
