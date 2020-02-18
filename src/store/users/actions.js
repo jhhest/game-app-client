@@ -65,7 +65,7 @@ export function userSignUp(username, email, password) {
   
   return (dispatch, getState) => {
     axios
-      .post("http://localhost:5000/user", { username, email, password })
+      .post("http://localhost:5000/user/signup", { username, email, password })
       .then(resp => //console.log("User Signup data:", resp.data)
         dispatch(signUpSucess(resp.data))
       )
