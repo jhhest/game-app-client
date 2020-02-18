@@ -4,6 +4,19 @@
 
 npm install redux react-redux redux-thunk react-dom react-router-dom redux-thunk axios react
 
+### todo
+
+## Frontend
+
+Draw a wireframe of the gamelobby.
+
+## Backend
+
+- [ ] Room model -> with id and home -> make a relationship. -> User.belongsTo(Room)
+- [ ] route to create a room -> Protected and test it with http pie.
+- [ ] stream -> "/stream" -> get allrooms and send on streem.
+- [ ] client side -> connect to room on app.js -> dispatch action/ setup reducer for rooms.
+
 ## Notes from teacher.
 
 ### Server:
