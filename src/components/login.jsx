@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { userLogin } from "../store/users/actions";
 import { withRouter } from "react-router";
-import { Link } from "react-router-dom";
 
 export class login extends Component {
   state = {
@@ -63,24 +62,13 @@ export class login extends Component {
           <div class="card">
             <div class="card-header">
               <h3>Sign In</h3>
-              <div class="d-flex justify-content-end social_icon">
-                <span>
-                  <i class="fab fa-facebook-square"></i>
-                </span>
-                <span>
-                  <i class="fab fa-google-plus-square"></i>
-                </span>
-                <span>
-                  <i class="fab fa-twitter-square"></i>
-                </span>
-              </div>
             </div>
             <div class="card-body">
               <form onSubmit={this.handleSubmit}>
                 <div class="input-group form-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
-                      <i class="fas fa-user"></i>
+                      <i class="fa fa-user"></i>
                     </span>
                   </div>
                   <input
@@ -96,7 +84,7 @@ export class login extends Component {
                 <div class="input-group form-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
-                      <i class="fas fa-key"></i>
+                      <i class="fa fa-key"></i>
                     </span>
                   </div>
                   <input

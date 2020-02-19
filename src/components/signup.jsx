@@ -49,7 +49,7 @@ export class signup extends Component {
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="fas fa-user"></i>
+                    <i class="fa fa-user"></i>
                   </span>
                 </div>
                 <input
@@ -65,7 +65,7 @@ export class signup extends Component {
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="fas fa-user"></i>
+                    <i class="fa fa-user"></i>
                   </span>
                 </div>
                 <input
@@ -81,7 +81,7 @@ export class signup extends Component {
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="fas fa-user"></i>
+                    <i class="fa fa-user"></i>
                   </span>
                 </div>
                 <input
