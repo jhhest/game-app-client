@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { userLogin } from "../store/users/actions";
+import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 
 export class login extends Component {
@@ -13,9 +14,13 @@ export class login extends Component {
     event.preventDefault();
     const { email, password } = this.state;
     console.log("this.state", this.state);
-    console.log("what is props dispatch", this.props.dispatch);
-    this.props.dispatch(userLogin(email, password));
-    this.props.history.push("/game_room");
+    console.log(
+      "what is props dispatch in handleSubmit, login.jsx",
+      this.props.dispatch
+    );
+    await this.props.dispatch(userLogin(email, password));
+    console.log("handleSubmit-Login: ", this.props.user);
+    this.props.history.push("/game_lobby");
   };
 
   handleChange = event => {
@@ -136,4 +141,5 @@ export class login extends Component {
   }
 }
 
-export default connect()(login);
+// export default withRouter(connect(mapStateToProps, { login })(login));
+export default withRouter(connect()(login));
