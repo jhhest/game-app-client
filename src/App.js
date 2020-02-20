@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Menu from "./components/menu";
 import Footer from "./components/footer";
 import Home from "./page/home";
@@ -19,7 +19,7 @@ export class App extends Component {
     this.stream.onmessage = event => {
       const { data } = event;
       const action = JSON.parse(data);
-      const { type, payload } = action;
+      // const { type, payload } = action;
       console.log("stream action", action);
       this.props.dispatch(action);
     };
@@ -30,10 +30,12 @@ export class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Menu />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/game_lobby" component={GameLobby} />
-          <Route exact path="/" component={Home} />
+          <Switch>
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/game_lobby" component={GameLobby} />
+            <Route exact path="/" component={Home} />
+          </Switch>
         </BrowserRouter>
         <Footer />
       </div>
@@ -41,8 +43,4 @@ export class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps)(App);
+export default connect()(App);

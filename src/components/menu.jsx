@@ -4,33 +4,33 @@ import { Link } from "react-router-dom";
 export class menu extends Component {
   render() {
     return (
-      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <div class="container">
-          <a class="navbar-brand" href="index.php">
-            <img width="130px" src="" />
+      <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+        <div className="container">
+          <a className="navbar-brand" href="index.php">
+            {/* <img width="130px" src="" /> */}
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#collapsibleNavbar"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <Link class="nav-link" to="/">
+          <div className="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <a className="nav-link" href="#">
                   About us
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <a className="nav-link" href="#">
                   Contact us
                 </a>
               </li>

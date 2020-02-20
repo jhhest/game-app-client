@@ -58,70 +58,70 @@ export class login extends Component {
       //   <Link to="/signup"><p>Signup</p></Link>
       // </form>
 
-      <div class="container">
-        <div class="d-flex justify-content-center h-100">
-          <div class="card">
-            <div class="card-header">
+      <div className="container">
+        <div className="d-flex justify-content-center h-100">
+          <div className="card">
+            <div className="card-header">
               <h3>Sign In</h3>
             </div>
-            <div class="card-body">
+            <div className="card-body">
               <form onSubmit={this.handleSubmit}>
-                <div class="input-group form-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="fa fa-user"></i>
+                <div className="input-group form-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">
+                      <i className="fa fa-user"></i>
                     </span>
                   </div>
                   <input
                     onChange={this.handleChange}
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     placeholder="email"
                     value={this.state.email}
                     name="email"
-                    tabindex="1"
+                    tabIndex="1"
                   />
                 </div>
-                <div class="input-group form-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="fa fa-key"></i>
+                <div className="input-group form-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">
+                      <i className="fa fa-key"></i>
                     </span>
                   </div>
                   <input
                     onChange={this.handleChange}
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     placeholder="password"
                     value={this.state.password}
                     name="password"
-                    tabindex="2"
+                    tabIndex="2"
                   />
                 </div>
-                <div class="row align-items-center remember">
-                  <input type="checkbox" tabindex="3" />
+                <div className="row align-items-center remember">
+                  <input type="checkbox" tabIndex="3" />
                   Remember Me
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     type="submit"
                     value="Login"
-                    class="btn float-right login_btn"
-                    tabindex="4"
+                    className="btn float-right login_btn"
+                    tabIndex="4"
                   />
                 </div>
               </form>
             </div>
-            <div class="card-footer">
-              <div class="d-flex justify-content-center links">
+            <div className="card-footer">
+              <div className="d-flex justify-content-center links">
                 Don't have an account?
-                <a href="/signup" tabindex="5">
+                <a href="/signup" tabIndex="5">
                   Sign Up
                 </a>
               </div>
-              <div class="d-flex justify-content-center">
+              {/* <div className="d-flex justify-content-center">
                 <a href="#">Forgot your password?</a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
