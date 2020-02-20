@@ -12,15 +12,10 @@ const baseUrl = "http://localhost:5000";
 // import axios from "axios";
 
 export class App extends Component {
-  state = {
-    rooms: [],
-    room: "first"
-  };
-
   stream = new EventSource(`${baseUrl}/stream`);
 
   componentDidMount() {
-    console.log("did component mount? ")
+    console.log("did component mount? ");
     this.stream.onmessage = event => {
       const { data } = event;
       const action = JSON.parse(data);

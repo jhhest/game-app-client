@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
 import Login from "../components/login";
 
 export class home extends Component {
   render() {
-    return (
-      <section>
-        <Login />
-      </section>
-    );
+    console.log("this.props;", this.props);
+    return <section>{<Login />}</section>;
   }
 }
 
-export default home;
+const mapStateToProps = state => {};
+
+export default connect()(home);
