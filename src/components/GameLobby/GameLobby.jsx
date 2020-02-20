@@ -14,14 +14,14 @@ export class GameLobby extends Component {
   };
 
   render() {
-    if (this.props.user) {
-      if (!this.props.user.token) {
-        return (
-          <p>
-            Login to access the game lobby <Link to="/">Return to login</Link>
-          </p>
-        );
-      }
+    console.log("GameLobby check token: ", this.props.user);
+
+    if (!this.props.user) {
+      return (
+        <p>
+          Login to access the game lobby <Link to="/">Return to login</Link>
+        </p>
+      );
     }
 
     return (

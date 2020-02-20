@@ -19,6 +19,7 @@ export class login extends Component {
     );
     await this.props.dispatch(userLogin(email, password));
     console.log("handleSubmit-Login: ", this.props.user);
+
     this.props.history.push("/game_lobby");
   };
 

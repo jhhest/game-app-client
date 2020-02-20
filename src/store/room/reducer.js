@@ -1,4 +1,4 @@
-const ALL_ROOMS = "ALL_ROOMS";
+const ALL_ROOMS = "room/ALL_ROOMS";
 const ONE_ROOM = "room/ONE_ROOM";
 const JOIN_ROOM = "JOIN_ROOM";
 
@@ -11,7 +11,9 @@ export default function(state = initialState, action = {}) {
     }
 
     case ONE_ROOM: {
-      return [...state, action.payload];
+      //const Newstate = {...state, [action.payload]}
+      //console.log("ONE_ROOM STATE: ", Newstate)
+      //return { ...state, rooms: { ...state, {...action.payload } } };
     }
 
     case JOIN_ROOM: {

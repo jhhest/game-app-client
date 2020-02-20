@@ -32,8 +32,8 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Menu />
         <BrowserRouter>
+          <Menu />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/game_lobby" component={GameLobby} />
