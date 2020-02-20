@@ -20,6 +20,7 @@ export class App extends Component {
   stream = new EventSource(`${baseUrl}/stream`);
 
   componentDidMount() {
+    console.log("did component mount? ")
     this.stream.onmessage = event => {
       const { data } = event;
       const action = JSON.parse(data);
