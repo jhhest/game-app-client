@@ -1,5 +1,5 @@
 const ALL_ROOMS = "ALL_ROOMS";
-const ONE_ROOM = "ONE_ROOM";
+const ONE_ROOM = "room/ONE_ROOM";
 const JOIN_ROOM = "JOIN_ROOM";
 
 const initialState = { room: {}, rooms: [] };

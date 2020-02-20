@@ -13,6 +13,7 @@ export default (state = initialState, { type, payload }) => {
       //   console.log("called payload: ", payload);
       //   const result = { ...state, ...payload };
       //   result.user = { payload }
+      
       return { ...state, user: { ...payload } };
     case SIGNUP_SUCCES:
       console.log("is reducer called?s", payload);

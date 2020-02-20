@@ -4,7 +4,7 @@ export default class Room extends Component {
   render() {
     const { id, name } = this.props;
     return (
-      <div className="roomItem">
+      <div className="roomItem" id={id}>
         <div>{name}</div>
         <button className="joinRoom btn btn-primary">
           {" "}

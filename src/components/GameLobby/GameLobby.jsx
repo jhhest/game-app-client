@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Room from "../GameLobby/Room"; //component for displaying the rooms
+import CreateRoomForm from "./CreateRoomForm";
+import { Link } from "react-router-dom";
 
 export class GameLobby extends Component {
   populateRoomLists = rooms => {
@@ -12,9 +14,19 @@ export class GameLobby extends Component {
   };
 
   render() {
-    console.log("Redux State of Rooms: ", this.props.rooms);
+    if (this.props.user) {
+      if (!this.props.user.token) {
+        return (
+          <p>
+            Login to access the game lobby <Link to="/">Return to login</Link>
+          </p>
+        );
+      }
+    }
+
     return (
       <div className="game-lobby-container">
+        <CreateRoomForm />
         <div className="welcome-game-lobby">
           <h1>Welcome to the Game Lobby</h1>
         </div>
@@ -27,7 +39,8 @@ export class GameLobby extends Component {
 }
 
 const mapStateToProps = state => ({
-  rooms: state.room.rooms
+  rooms: state.room.rooms,
+  user: state.userdata.user
 });
 
 // const mapDispatchToProps = { joinRoom };
