@@ -1,10 +1,10 @@
 import axios from "axios";
-import instance from "../../axios-instance";
+//import instance from "../../axios-instance";
 export const LOGIN_SUCCES = "LOGIN_SUCCES";
-export const SIGNUP_SUCCES = "SIGNUP_SUCCES"
+export const SIGNUP_SUCCES = "SIGNUP_SUCCES";
 
 function loginSucces(resp) {
-  const { token, username, email } = resp
+  const { token, username, email } = resp;
   console.log(`
   Sanity check
   token: ${token}
@@ -30,15 +30,13 @@ export function userLogin(email, password) {
   return (dispatch, getState) => {
     axios
       .post("http://localhost:5000/user/login", { email, password })
-      .then(resp =>
-        dispatch(loginSucces(resp.data))
-      )
+      .then(resp => dispatch(loginSucces(resp.data)))
       .catch(error => console.error("error", error));
   };
 }
 
 function signUpSucess(resp) {
-  const { password, username, email } = resp
+  const { password, username, email } = resp;
   console.log(`
   2. signupSucces --
   password: ${password}
@@ -62,13 +60,13 @@ export function userSignUp(username, email, password) {
     email:${email}
     password:${password}
     `);
-  
+
   return (dispatch, getState) => {
     axios
       .post("http://localhost:5000/user/signup", { username, email, password })
-      .then(resp => //console.log("User Signup data:", resp.data)
-        dispatch(signUpSucess(resp.data))
-      )
+      .then((
+        resp //console.log("User Signup data:", resp.data)
+      ) => dispatch(signUpSucess(resp.data)))
       .catch(error => console.error("error", error));
   };
 }

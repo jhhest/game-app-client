@@ -15,8 +15,7 @@ export default function(state = initialState, action = {}) {
 
     case ONE_ROOM: {
       return {
-        ...state,
-        room: { ...action.payload }
+        rooms: [...state.rooms, action.payload]
       };
       //const Newstate = {...state, [action.payload]}
       //console.log("ONE_ROOM STATE: ", Newstate)

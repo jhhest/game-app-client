@@ -4,7 +4,7 @@ import Menu from "./components/menu";
 import Footer from "./components/footer";
 import Home from "./page/home";
 import Login from "./components/login";
-import Signup from "./components/signup";
+import Signup from "./components/Signup";
 import GameLobby from "./components/GameLobby/GameLobby";
 
 import { connect } from "react-redux";
@@ -20,11 +20,11 @@ export class App extends Component {
   stream = new EventSource(`${baseUrl}/stream`);
 
   componentDidMount() {
-    console.log("did component mount? ")
+    console.log("did component mount? ");
     this.stream.onmessage = event => {
       const { data } = event;
       const action = JSON.parse(data);
-      const { type, payload } = action;
+      //const { type, payload } = action;
       console.log("stream action", action);
       this.props.dispatch(action);
     };
@@ -48,6 +48,6 @@ export class App extends Component {
 
 const mapStateToProps = state => ({});
 
-const mapDispatchToProps = {};
+//const mapDispatchToProps = {};
 
 export default connect(mapStateToProps)(App);

@@ -35,29 +35,6 @@ export class login extends Component {
 
   render() {
     return (
-      // <form onSubmit={this.handleSubmit}>
-      //   <p>
-      //     emailadres:
-      //     <input
-      //       onChange={this.handleChange}
-      //       type="text"
-      //       value={this.state.email}
-      //       name="email"
-      //     />
-      //   </p>
-      //   <p>
-      //     password:
-      //     <input
-      //       onChange={this.handleChange}
-      //       type="text"
-      //       value={this.state.password}
-      //       name="password"
-      //     />
-      //   </p>
-      //   <button type="submit">submit</button>
-      //   <Link to="/signup"><p>Signup</p></Link>
-      // </form>
-
       <div class="container">
         <div class="d-flex justify-content-center h-100">
           <div class="card">
@@ -120,7 +97,7 @@ export class login extends Component {
                 </a>
               </div>
               <div class="d-flex justify-content-center">
-                <a href="#">Forgot your password?</a>
+                <a href="/password_reset">Forgot your password?</a>
               </div>
             </div>
           </div>

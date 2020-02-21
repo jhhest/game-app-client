@@ -7,7 +7,7 @@ export class menu extends Component {
       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img width="130px" src="" />
+            <img width="130px" src="" alt="" />
           </a>
           <button
             class="navbar-toggler"
@@ -25,14 +25,14 @@ export class menu extends Component {
                 </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <Link class="nav-link" href="/">
                   About us
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <Link class="nav-link" href="/">
                   Contact us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

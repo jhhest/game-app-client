@@ -9,7 +9,7 @@ export class footer extends Component {
             <div class="col-12">
               <p>
                 © All Rights Reserved by{" "}
-                <a href="#">
+                <a href="/">
                   Plug&Play.codaissuer -(with all love)
                   <i class="fa fa-love"></i>
                 </a>

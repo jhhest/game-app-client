@@ -22,15 +22,17 @@ export default class CreateRoomForm extends Component {
   render() {
     return (
       <form onSubmit={event => this.onSubmit(event)}>
-        <p>Why not make your own room?</p>
         <input
+          class="pull-left"
           type="text"
           name="room"
           placeholder="give a super cool room name"
           values={this.state.room}
           onChange={event => this.onChange(event)}
         ></input>
-        <button type="submit">materialize my room</button>
+        <button class="pull-right btn btn-default" type="submit">
+          + Create Room
+        </button>
       </form>
     );
   }
