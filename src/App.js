@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Menu from "./components/menu";
 import Footer from "./components/footer";
 import Home from "./page/home";
@@ -12,11 +12,6 @@ const baseUrl = "http://localhost:5000";
 // import axios from "axios";
 
 export class App extends Component {
-  state = {
-    rooms: [],
-    room: "first"
-  };
-
   stream = new EventSource(`${baseUrl}/stream`);
 
   componentDidMount() {
@@ -35,10 +30,12 @@ export class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Menu />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/game_lobby" component={GameLobby} />
-          <Route exact path="/" component={Home} />
+          <Switch>
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/game_lobby" component={GameLobby} />
+            <Route exact path="/" component={Home} />
+          </Switch>
         </BrowserRouter>
         <Footer />
       </div>

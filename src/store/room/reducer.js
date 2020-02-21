@@ -17,9 +17,6 @@ export default function(state = initialState, action = {}) {
       return {
         rooms: [...state.rooms, action.payload]
       };
-      //const Newstate = {...state, [action.payload]}
-      //console.log("ONE_ROOM STATE: ", Newstate)
-      //return { ...state, rooms: { ...state, {...action.payload } } };
     }
 
     case JOIN_ROOM: {
