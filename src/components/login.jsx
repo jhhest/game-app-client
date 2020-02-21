@@ -17,10 +17,8 @@ export class login extends Component {
       "what is props dispatch in handleSubmit, login.jsx",
       this.props.dispatch
     );
-    await this.props.dispatch(userLogin(email, password));
+    await this.props.dispatch(userLogin(email, password, this.props.history));
     console.log("handleSubmit-Login: ", this.props.user);
-
-    this.props.history.push("/game_lobby");
   };
 
   handleChange = event => {

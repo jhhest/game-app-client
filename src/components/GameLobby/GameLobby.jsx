@@ -15,6 +15,13 @@ export class GameLobby extends Component {
     });
   };
 
+  componentDidMount() {
+    console.log(
+      "Just a test. Is the component mounted and what is the value of this.props",
+      this.props
+    );
+  }
+
   render() {
     console.log("GameLobby check token: ", this.props.user);
 
@@ -29,20 +36,20 @@ export class GameLobby extends Component {
     return (
       //<div className="game-lobby-container">
       <div className="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="box">
-              <div class="chat-room">
-                <aside class="kiri-side">
-                  <div class="user-head">
-                    <i class="fa fa-lobby-o"></i>
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="box">
+              <div className="chat-room">
+                <aside className="kiri-side">
+                  <div className="user-head">
+                    <i className="fa fa-lobby-o"></i>
                     <h3>Plug&Play</h3>
                   </div>
-                  <ul class="chat-list">
-                    <li class="active">
-                      <a class="lobby" href="#">
+                  <ul className="chat-list">
+                    <li className="active">
+                      <a className="lobby" href="#">
                         <h4>
-                          <i class="fa fa-list"></i>
+                          <i className="fa fa-list"></i>
                           Rooms
                         </h4>
                       </a>
@@ -52,36 +59,39 @@ export class GameLobby extends Component {
                       this.populateRoomLists(this.props.rooms)}
                   </ul>
                   <footer>
-                    <a class="chat-avatar" href="#javascript:;">
+                    <a className="chat-avatar" href="#javascript:;">
                       <img
                         alt=""
                         src="https://bootdey.com/img/Content/avatar/avatar1.png"
                       />
                     </a>
-                    <div class="user-status">
-                      <i class="fa fa-circle text-success">
+                    <div className="user-status">
+                      <i className="fa fa-circle text-success">
                         {this.props.user.username}
                       </i>
                     </div>
-                    <a class="chat-dropdown pull-right" href="#javascript:;">
-                      <i class="fa fa-chevron-down"></i>
+                    <a
+                      className="chat-dropdown pull-right"
+                      href="#javascript:;"
+                    >
+                      <i className="fa fa-chevron-down"></i>
                     </a>
                   </footer>
                 </aside>
-                <aside class="tengah-side">
-                  <div class="chat-room-head">
+                <aside className="tengah-side">
+                  <div className="chat-room-head">
                     <h3>Lobby @ Codaisseur code-34</h3>
-                    <form action="#" class="pull-right position">
+                    <form action="#" className="pull-right position">
                       <input
                         type="text"
                         placeholder="Search..."
-                        class="form-control search-btn "
+                        className="form-control search-btn "
                       />
                     </form>
                   </div>
-                  <div class="room-desk">
+                  <div className="room-desk">
                     <CreateRoomForm />
-                    <div class="room-box">
+                    <div className="room-box">
                       Active Room
                       {/* Reserve for the component to display the message of the chat (specially for Jan!!) */}
                     </div>

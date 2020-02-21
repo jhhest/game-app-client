@@ -21,7 +21,7 @@ function loginSucces(resp) {
   };
 }
 
-export function userLogin(email, password) {
+export function userLogin(email, password, history) {
   console.log(`
     email:${email}
     password:${password}
@@ -30,7 +30,10 @@ export function userLogin(email, password) {
   return (dispatch, getState) => {
     axios
       .post("http://localhost:5000/user/login", { email, password })
-      .then(resp => dispatch(loginSucces(resp.data)))
+      .then(resp => {
+        dispatch(loginSucces(resp.data))
+        history.push("/game_lobby");
+      })
       .catch(error => console.error("error", error));
   };
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Menu from "./components/menu";
 import Footer from "./components/footer";
 import Home from "./page/home";
@@ -25,17 +25,22 @@ export class App extends Component {
     };
   }
 
+  protectedRoute = (Component, routerProps) => {
+    const user = this.props.user
+    return user && user.token ? <Component {...routerProps} /> : <Redirect to="/login" />
+  }
+
   render() {
     return (
       <div className="App">
         <BrowserRouter>
           <Menu />
-          <Switch>
+          <switch>
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/game_lobby" component={GameLobby} />
+            <Route exact path="/game_lobby" render={(routerProps) => this.protectedRoute(GameLobby, routerProps)} />
             <Route exact path="/" component={Home} />
-          </Switch>
+          </switch>
         </BrowserRouter>
         <Footer />
       </div>
@@ -43,7 +48,11 @@ export class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => {
+  return {
+    user: state.userdata.user,
+  }
+};
 
 //const mapDispatchToProps = {};
 

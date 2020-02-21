@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export class menu extends Component {
   render() {
     return (
-      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <div class="container">
-          <a class="navbar-brand" href="index.php">
+      <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+        <div className="container">
+          <a className="navbar-brand" href="index.php">
             <img width="130px" src="" alt="" />
           </a>
           <button
@@ -24,13 +24,24 @@ export class menu extends Component {
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" href="/">
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">
+                  Login
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/game_lobby">
+                  Lobby
+                </Link>
+              </li>
+              
+              <li className="nav-item">
+                <Link className="nav-link" to="/">
                   About us
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" href="/">
+              <li className="nav-item">
+                <Link className="nav-link" to="/">
                   Contact us
                 </Link>
               </li>

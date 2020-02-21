@@ -19,8 +19,7 @@ export class home extends Component {
     } else {
       return (
         <section>
-          {!this.props.user && <Login />}
-          {this.props.user && <GameLobby />}
+          <h2>Welcome to the game!</h2>
         </section>
       );
     }
